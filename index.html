@@ -9,33 +9,36 @@
 <body>
     <script src = "js/ejercicios.js"></script>
     <script src = "js/utils.js"></script>   
-    <form>
-
         <div class="input-group mb-3">
-            <span class="input-group-text" id="Nombre">Nombre</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <span class="input-group-text" >Nombre</span>
+            <input type="text" id="Nombre" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
         <div class="input-group mb-3">
-            <span class="input-group-text" id="Nombre">Fecha ('YYYY-MM-DD')</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            <span class="input-group-text">Fecha ('YYYY-MM-DD')</span>
+            <input type="text" id="fechaNac" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-    <div id = "resultado">       
-    </div>
+        <button type="button" onclick="ObtenerEdad()" class="btn btn-primary">Enviar</button>
+    <p id = "resultadoEdad"> </p>
 
 
-    <form>
         <div class="input-group mb-3">
             <span class="input-group-text" id="FrutaIngreso">Fruta</span> 
-            <input type="text" id="fruta" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"> 
+            <input type="text" id="frutaInput" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"> 
         </div>
-    
         <button type="button" onclick="hayFruta()" class="btn btn-primary">Chequear si hay fruta!</button>
-    </form>
     
-    <p id="fruta" class="fruta"> </p>
-    
+    <p id="resultadoFruta" class="fruta"></p>
+
+    <button type="button" onclick="YoObjeto()" class="btn btn-primary"> Probar yo objeto</button>
+    <button type="button" onclick="dobleElementos()" class="btn btn-primary"> doble elementos</button>
+    <button type="button" onclick="TrianguloAsteriscos1()" class="btn btn-primary"> Triangulo Asteriscos 1</button>
+    <button type="button" onclick="TrianguloAsteriscos2()" class="btn btn-primary"> Triangulo Asteriscos 2</button>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Ingresa nombres separados por una , </span>
+        <input type="text" id="ListaNombres" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="button" onclick="NombresA()" class="btn btn-primary"> Nombres con A</button>
 
 </body>
 </html>
