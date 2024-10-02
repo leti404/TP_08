@@ -80,4 +80,33 @@ function ReemplazarPalabras(){
     resulOra.innerHTML = nuevaOracion;
 }
 
+//Ejercicio 9
+function CortarPalabra(){
+    const oracion2 = document.getElementById('oracion2').value;
+    const numCor = document.getElementById('numCor').value;
 
+    resulCor.innerHTML = oracion2.slice(0, numCor);
+}
+
+//Ejercicio 10
+function Separador(){
+    const oracion3 = document.getElementById('oracion3').value;
+    const lista  = oracion3.replaceAll(',',' - ');
+    resulSepa.innerHTML = " - " + lista;
+}
+
+//Ejercicio 11
+function CalcuRec(){
+    const oracion4 = document.getElementById('oracion4').value;
+    const lista  = oracion4.split(',');
+    let sumaValores = 0;
+    for (const pedido of lista) {
+        const partes = pedido.split(':');
+        const total = parseFloat(partes[1]);
+        sumaValores += total; 
+    }
+    resulCalcu.innerHTML = sumaValores
+
+
+   
+}

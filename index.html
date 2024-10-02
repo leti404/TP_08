@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funciones</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa; 
+            font-family: 'Arial', sans-serif; 
+            padding: 20px; 
+        }
+        .input-group-text {
+            background-color: #ffcccb; 
+            color: #000; 
+        }
+        .form-control {
+            border: 2px solid #ff69b4; 
+        }
+        .btn {
+            background-color: #ff69b4; 
+            color: #fff; 
+            border: 2px solid #ff69b4; 
+        }
+        .btn:hover {
+            background-color: #ff1493; 
+            border: 2px solid #ff69b4; 
+        }
+        #resultadoEdad, #resultadoFruta, #resulOra, #resulCor, #resulSepa, #resulCalcu {
+            margin-top: 15px; 
+            font-weight: bold; 
+            color: #ff1493; 
+        }
+    </style>
+
+
 </head>
 <body>
     <script src = "js/ejercicios.js"></script>
@@ -54,8 +84,34 @@
         <input type="text" id="palRem" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
     </div>
     <button type="button" onclick="ReemplazarPalabras()" class="btn btn-primary"> Reemplazar Palabras</button>
-
     <p id="resulOra"> </p>
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Ingresa una oracion </span>
+        <input type="text" id="oracion2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text">Ingresa un numeroooo </span>
+        <input type="number" id="numCor" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="button" onclick="CortarPalabra()" class="btn btn-primary"> Cortar Palabras</button>
+    <p id="resulCor"> </p>
+
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Ingresa palabras separadas por una coma (pepe,palta) </span>
+        <input type="text" id="oracion3" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="button" onclick="Separador()" class="btn btn-primary"> Separador</button>
+    <p id="resulSepa"> </p>
+
+
+    <div class="input-group mb-3">
+        <span class="input-group-text">Cada pedido se debe ingresar en el formato "nombre:total". Por ejemplo, un posible ingreso podría ser: "Pizza:15.50, Hamburguesa:8.75 </span>
+        <input type="text" id="oracion4" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="button" onclick="CalcuRec()" class="btn btn-primary"> CalcuRec</button>
+    <p id="resulCalcu"> </p>
 
 </body>
 </html>
