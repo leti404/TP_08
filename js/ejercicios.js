@@ -64,6 +64,10 @@ function TrianguloAsteriscos2(){
 function NombresA(){
     const nombres = document.getElementById('ListaNombres').value;
     const lista  = nombres.split(',');
-    const palabrasA = lista.filter(nombre => nombre.startsWith("a"));
-    console.log(palabrasA);
+    const palabrasA = lista.filter(nombre => nombre.trim().startsWith("a"));
+    for(const palabras of palabrasA ){
+        console.log(palabras.trim());
+    }
 }
+
+
