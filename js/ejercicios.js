@@ -70,4 +70,14 @@ function NombresA(){
     }
 }
 
+//Ejercicio 8
+function ReemplazarPalabras(){
+    const oracion = document.getElementById('oracion').value;
+    const palRem = document.getElementById('palRem').value;
+    const palOr = document.getElementById('palOr').value;
+
+    const nuevaOracion = oracion.replace(palOr , palRem);
+    resulOra.innerHTML = nuevaOracion;
+}
+
 
